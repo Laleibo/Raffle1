@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  # root 'page#index'
-  root 'raffles#index'
+  root 'page#index'
+  # root 'raffles#index'
   get '/secret' => 'page#secret'
 
   get '/register' => 'users#new'
