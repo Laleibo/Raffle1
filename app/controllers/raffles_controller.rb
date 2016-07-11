@@ -69,6 +69,11 @@ def winner
   @winner = @winner_ticket.user
 end
 
+def display
+  if @user == @winner
+  "You are the Winner"
+  end
+end
 
   # DELETE /raffles/1
   # DELETE /raffles/1.json

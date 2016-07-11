@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get '/register' => 'users#new'
   post '/register' => 'users#create'
+  get '/users' => 'users#show'
   resources :users
 
   get '/login' => 'sessions#new'

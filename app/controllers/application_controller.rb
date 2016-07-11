@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
   def authorize
     redirect_to login_path unless current_user
   end
-  
+
+def show
+  user_path[:id]
+end
+
   helper_method :current_user
 end

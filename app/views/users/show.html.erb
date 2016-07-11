@@ -19,6 +19,16 @@
   <strong>Phone number:</strong>
   <%= @user.phone_number %>
 </p>
+<p>
+
+<h1> Raffles Tickets Purchased: </h1>
+<% @user.raffles.each do |raffle|  %>
+  Title:<%= link_to raffle.title, raffle %><br>
+  Prize: <%= raffle.prize %><br><br>
+  <%= @display %>
+
+<% end %>
+</p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

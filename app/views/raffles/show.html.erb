@@ -16,7 +16,7 @@
   <%= @raffle.prize %>
 </p>
 
-<%= link_to 'Buy Ticket', confirm_path(raffle_id: @raffle.id) %>
+<%= link_to 'Buy 1 Ticket', confirm_path(raffle_id: @raffle.id) %>
 <%= link_to 'Back', raffles_path %>
     <% if current_user.admin? %>
 <%= link_to 'Edit', edit_raffle_path(@raffle) %> |
