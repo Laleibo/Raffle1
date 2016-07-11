@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Raffles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Prize</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @raffles.each do |raffle| %>
+      <tr>
+        <td><%= raffle.title %></td>
+        <td><%= raffle.description %></td>
+        <td><%= raffle.prize %></td>
+        <td><%= link_to 'Show', raffle %></td>
+        <% if current_user.admin? %>
+        <td><%= link_to 'Edit', edit_raffle_path(raffle) %></td>
+        <td><%= link_to 'Destroy', raffle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Winner', winner_path(raffle) %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Raffle', new_raffle_path %>

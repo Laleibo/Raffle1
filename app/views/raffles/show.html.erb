@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p><%= @count %> tickets have been sold for this raffle. </p>
+<p>
+  <strong>Title:</strong>
+  <%= @raffle.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @raffle.description %>
+</p>
+
+<p>
+  <strong>Prize:</strong>
+  <%= @raffle.prize %>
+</p>
+
+<%= link_to 'Buy Ticket', confirm_path(raffle_id: @raffle.id) %>
+<%= link_to 'Back', raffles_path %>
+    <% if current_user.admin? %>
+<%= link_to 'Edit', edit_raffle_path(@raffle) %> |
+<%= link_to 'Winner' , winner_path(raffle_id: @raffle.id) %>
+ <% end %>
