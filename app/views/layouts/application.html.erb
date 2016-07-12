@@ -12,9 +12,9 @@
 
   <body>
     <% if current_user && current_user.admin? %>
-      Signed in as <%= current_user.first_name %> | <%= link_to 'My Profile', current_user %> |<%= link_to "Logout", logout_path %> | <%= link_to "Create Raffle", new_raffle_path %>
+      Signed in as <%= current_user.first_name %> | <%= link_to 'My Profile', current_user %> | <%= link_to "Logout", logout_path %> | <%= link_to "Create Raffle", new_raffle_path %>
     <% elsif current_user %>
-      Signed in as <%= current_user.first_name %> |<%= link_to 'My Profile', current_user %> | <%= link_to "Logout", logout_path %>
+      Signed in as <%= current_user.first_name %> | <%= link_to 'My Profile', current_user %> | <%= link_to "Logout", logout_path %>
     <% else %>
       <%= link_to 'Login', login_path %> | <%= link_to 'Register', register_path %>
     <% end %>
