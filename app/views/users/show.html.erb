@@ -19,17 +19,19 @@
 </div>
 
 <h2> Raffle Event History</h2>
-<div class="ticket">
 <% @user.raffles.each do |raffle|  %>
-  <%= link_to raffle.title, raffle, class: 'raffle_link' %></div><br><br>
-<div class="ticket"><% if raffle.user_id == current_user.id %>
-<div class="win"<h2>  You Won! </h2>
-<h4>  Prize: <%= raffle.prize %> </h4>
+<div class="all">
+<div class="ticket">
+    <%= link_to raffle.title, raffle, class: 'raffle_link' %><br><br>
+  </div>
+  <% if raffle.user_id == current_user.id %>
+    <div class="win">
+      <h2>  You Won! </h2>
+      <h4>  Prize: <%= raffle.prize %> </h4>
+    </div>
   <% end %>
 <% end %>
-</div>
-</div>
-
+</div
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

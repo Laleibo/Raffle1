@@ -25,22 +25,25 @@
 .col-md-1 {
     margin-right: 5em;
 }
-
+.win {
+  float: right;
+  display: flex;
+}
 .ticket {
   border: 2px solid black;
   border-radius: 4px;
-  margin: 2.5px;
+  margin: 5px;
   padding: 20px;
   background: red;
   margin-right: 75%;
+  text-align: center;
 }
 
 .ticket a {
   color: black;
-  font-size: 16px;
-  text-align: center;
+  font-size: 22px;
 }
 
-.win {
-  background: white;
+.ticket a.hover {
+  background: red;
 }
