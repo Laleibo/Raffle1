@@ -15,6 +15,13 @@
  *= require_self
  */
 
- a:hover{
-   background-color: transparent;
- }
+
+
+a:hover{
+  background-color: transparent;
+}
+
+.nav a, .nav{
+  font-size: 20px;
+  color: #ffffff !important;
+}
