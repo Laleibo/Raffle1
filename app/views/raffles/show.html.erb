@@ -3,7 +3,7 @@
 <div class="jumbotron">
   <h1><%= @raffle.title %></h1><br>
   <h3> <%= @raffle.description %></h3><br><br>
-  <div class="counter"><%= @count %> tickets have been sold for this raffle. </div>
+  <div class="counter"> <%= pluralize(@count, Ticket)%> Purchased For This Raffle. </div>
 </div>
 <div class="row prize">
   <div class="col-sm-6 col-md-4 prize">
@@ -24,7 +24,7 @@
        </div>
 <br><br>
 <div class="btn-group" role="group" aria-label="...">
-  <button type="button" class="btn btn-default"><%= link_to 'Back', raffles_path %></button>
+  <button type="button" class="btn btn-default"><%= link_to 'View WynRaffles', raffles_path %></button>
   <% if current_user.admin? %>
       <button type="button" class="btn btn-default"><%= link_to 'Edit', edit_raffle_path(@raffle) %></button>
       <%= button_to 'Generate Winner' , "/winner/#{@raffle.id}" %>

@@ -1,6 +1,17 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.showheader {
+  font-size: 36px;
+padding: 25px;
+margin-left: 91px;
+}
+
+.l {
+  background-color: silver;
+}
+
+
 .register {
   text-align: center;
 }
@@ -22,7 +33,7 @@
  .y {
    background-color: transparent;
    margin: 10px;
-   font-size: 14px;
+   font-size: 19px;
    padding: 5px;
  }
 .x {
@@ -30,11 +41,12 @@
   border: 1px solid black;
   font-size: 14px;
   padding: 5px;
+  background-color: white;
+  margin-left: -13px;
 }
 
 .blink_me {
   color:white;
-  border-top:3px dashed silver;
 }
   .blink_me h2{
     color: white;
@@ -46,22 +58,38 @@
   50% { opacity: 0.0; }
 }
 .ticket {
-  border: 2px solid black;
   border-radius: 17px;
-  margin: 5px;
-  padding: 10px;
-  background: red;
-  margin-right: 70%;
-  text-align: center;
-  color: black;
-  margin-bottom: 5px;
+      // margin: 9px;
+      margin-top: 21px;
+      background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSnhw1ZGoTyGOJeNsmj39B79lDMzdTRP18P9oiyKl2o1EIa7Bmc");
+      padding-top: 40px;
+      text-align: center;
+      color: black;
+padding-bottom: 13px;
+height: 155px;
+width: 325px;
 }
 
+.bb{
+  background-color: white;
+  padding: 10px;
+  border: 1px solid black;
+  float:right;
+  margin-bottom: 25px;
+  margin-right: 25px;
+}
 .ticket a {
-  color: silver;
+  color: black;
   font-size: 22px;
 }
 
-.ticket a.hover {
-  background: red;
+.ticket a:hover {
+  background: transparent;
+  color: white;
+}
+
+.update {
+  border: 2px solid black;
+  padding: 5px;
+  float: right;
 }

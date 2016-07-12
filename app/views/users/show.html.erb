@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
-<h2> WynRaffe Account </h2>
+
+<div class="showheader"> WynRaffe Profile </div>
+<div class="container l ">
 <div class="row">
   <div class="col-md-2 y"><strong>First Name</strong></div>
   <div class="col-md-2 x">  <%= @user.first_name %></div>
@@ -13,27 +15,26 @@
   <div class="col-md-2 x">  <%= @user.email %></div>
 </div>
 <div class="row">
-  <div class="col-md-2 y "><strong>Phone number</strong></div>
+  <div class="col-md-2 y "><strong>Phone Number</strong></div>
   <div class="col-md-2 x ">  <%= @user.phone_number %></div>
 </div>
-</div><br>
-<%= link_to 'Update Your Account', edit_user_path(@user) %><br>
+<button class="btn inline bb"><%= link_to 'Update Your Account', edit_user_path(@user) %></button>
+  <br> <br>
+</div>
 
-<h2> WynRaffle Event History</h2>
-<button class="btn inline"><%= link_to 'View Ongoing WynRaffles', raffles_path %></button>
+<div class="showheader"> WynRaffle Event History </div>
+<div class="container m">
+<button class="btn inline bb"><%= link_to 'View Ongoing WynRaffles', raffles_path %></button>
 <% @user.raffles.each do |raffle|  %>
   <div class="">
     <div class="ticket">
       <%= link_to raffle.title, raffle, class: 'raffle_link' %><br>
-        <h4>  Prize: <%= raffle.prize %> </h4>
-      <h5> Ticket Id: <%= %>
     <% if raffle.user_id == current_user.id %>
         <div class="blink_me">
-        <h2>  You Won! </h2>
+        <h4>  You Won! </h4>
       </div>
       </div>
     <% end %>
-  </div>
   </div>
 <% end %>
 </div>
