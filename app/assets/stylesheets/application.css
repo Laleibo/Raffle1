@@ -19,10 +19,14 @@
 
 a:hover{
   color: red;
-  background-color: transparent;;
+  background-color: transparent;
 }
 
-/*.nav a, .nav{
-  font-size: 20px;
-  color: #ffffff !important;*/
-/*}*/
+.nav {
+  font-size: 18px;
+  color: #black !important;
+}
+
+.nav a {
+  padding: 10px;
+}
