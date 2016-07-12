@@ -11,15 +11,22 @@
   </head>
 
   <body>
-    <% if current_user && current_user.admin? %>
-      Signed in as <%= current_user.first_name %> | <%= link_to 'My Profile', current_user %> |<%= link_to "Logout", logout_path %> | <%= link_to "Create Raffle", new_raffle_path %>
-    <% elsif current_user %>
-      Signed in as <%= current_user.first_name %> |<%= link_to 'My Profile', current_user %> | <%= link_to "Logout", logout_path %>
-    <% else %>
-      <%= link_to 'Login', login_path %> | <%= link_to 'Register', register_path %>
-    <% end %>
+    <div class="container">
+      <div class="row">
 
-<%= yield %>
+          <% if current_user && current_user.admin? %>
+            Signed in as <%= current_user.first_name %> | <%= link_to 'My Profile', current_user %> |<%= link_to "Logout", logout_path %> | <%= link_to "Create Raffle", new_raffle_path %>
+          <% elsif current_user %>
+            Signed in as <%= current_user.first_name %> |<%= link_to 'My Profile', current_user %> | <%= link_to "Logout", logout_path %>
+          <% else %>
+            <%= link_to 'Login', login_path %> | <%= link_to 'Register', register_path %>
+          <% end %>
+      </div>
+      <div class="col-sm-12 main">
+        <%= yield %>
+      </div>
+
+    </div>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
