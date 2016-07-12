@@ -1,3 +1,6 @@
-<h1> You have 1 ticket to <%= @raffle.title %>
-
-  <%= link_to 'Back', raffles_path %>
+<div class="confirmticket">
+1 TICKET <br> <%= @raffle.title %>
+</div><br>
+<div class="btn-group" role="group" aria-label="...">
+  <button type="button" class="btn btn-default"><%= link_to 'View WynRaffles', raffles_path %></button>
+</div>

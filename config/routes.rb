@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
 
   get '/confirm' => 'raffles#confirm'
-  post '/winner/:raffle_id' => 'raffles#generate'
-  
+post '/winner/:raffle_id' => 'raffles#generate'
+
 
 
   resources :raffles
