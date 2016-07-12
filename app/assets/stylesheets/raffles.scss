@@ -55,6 +55,37 @@ width: 325px;
   margin-left: 100px;
   margin-right: 850px;
   margin-bottom: 50px;
+}
 
+.table-hover thead tr {
+  font-size: 24px;
+  border-bottom: 4px solid black;
+  color: red;
+}
+.table-hover tr th{
+width: 335px;
+}
 
+.table-hover tbody tr{
+  border-bottom: 2px solid black;
+  font-size: 16px;
+}
+
+.tr {
+  border: 1px solid black;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+  font-size: 17px;
+  padding-top: 40 px;
+}
+
+.btn a:visited{
+    color: black;
+}
+
+.table > tbody > tr > td.raffletitle {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: -5px;
 }

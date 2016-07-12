@@ -3,7 +3,7 @@
 <div class="jumbotron">
   <h1><%= @raffle.title %></h1><br>
   <h3> <%= @raffle.description %></h3><br><br>
-  <div class="counter"> <%= pluralize(@count, Ticket)%> Purchased For This Raffle. </div>
+  <div class="counter"> <%= @count%> Tickets Purchased For This Raffle. </div>
 </div>
 <div class="row prize">
   <div class="col-sm-6 col-md-4 prize">
@@ -15,7 +15,7 @@
       </div>
    </div>
         <% if @raffle.winner == nil %>
-  <%= link_to 'Buy 1 Ticket', confirm_path(raffle_id: @raffle.id) %>
+  <%= link_to 'Buy 1 Ticket', confirm_path(raffle_id: @raffle.id) , class: 'btn btn-success' %>
  <% else %>
  <div class= "winner">The Winning Ticket: <br><br><strong><%= @raffle.winner.first_name%> <%= @raffle.winner.last_name%> </strong></div>
  <% end %>
@@ -23,10 +23,10 @@
           </div>
        </div>
 <br><br>
-<div class="btn-group" role="group" aria-label="...">
-  <button type="button" class="btn btn-default"><%= link_to 'View WynRaffles', raffles_path %></button>
+<button type="button" class="btn btn-primary"><%= link_to 'View WynRaffles', raffles_path %></button>
   <% if current_user.admin? %>
-      <button type="button" class="btn btn-default"><%= link_to 'Edit', edit_raffle_path(@raffle) %></button>
-      <%= button_to 'Generate Winner' , "/winner/#{@raffle.id}" %>
+  <button type="button" class="btn btn-secondary"><%= link_to 'Edit', edit_raffle_path(@raffle) %></button>
+<%= button_to 'Generate Winner' , "/winner/#{@raffle.id}", class: 'btn btn-success' %>
+
 <% end %>
 </div>
