@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    # @winner = Raffle.find(params[:raffle_id]).tickets.sample.user_id
   end
 
   # GET /users/new
@@ -57,6 +58,11 @@ end
       format.json { head :no_content }
     end
   end
+
+  # def display
+  #   @raffle = Raffle.find(params[:raffle_id])
+  #   @winner = @raffle.tickets.sample.user_id
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.

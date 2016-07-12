@@ -16,9 +16,16 @@
   <%= @raffle.prize %>
 </p>
 
+<% if @raffle.winner == nil %>
 <%= link_to 'Buy 1 Ticket', confirm_path(raffle_id: @raffle.id) %>
+<% else %>
+<%= @raffle.winner.first_name%>
+<%= @raffle.winner.last_name%>
+<% end %>
+
+
 <%= link_to 'Back', raffles_path %>
-    <% if current_user.admin? %>
-<%= link_to 'Edit', edit_raffle_path(@raffle) %> |
-<%= link_to 'Winner' , winner_path(raffle_id: @raffle.id) %>
+  <% if current_user.admin? %>
+    <%= link_to 'Edit', edit_raffle_path(@raffle) %> |
+    <%= button_to 'Generate Winner' , "/winner/#{@raffle.id}" %>
  <% end %>
