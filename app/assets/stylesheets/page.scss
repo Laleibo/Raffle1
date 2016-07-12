@@ -144,7 +144,8 @@ button#view-raf  {
 }
 
 .thumbnail {
-  height: 400px;
+  height: 450px;
+  overflow: scroll;
 }
 
 .cards h3 {
@@ -162,13 +163,15 @@ button#view-raf  {
     margin: auto;
   padding: 30px;
 }
-.card h4 {
-  text-align: justify;
-}
 
 .caption {
   margin-top: 100px;
   margin-bottom: 30px;
+}
+
+.caption h4 {
+  text-align: justify;
+  padding: 10px 30px;
 }
 
 .footer {
