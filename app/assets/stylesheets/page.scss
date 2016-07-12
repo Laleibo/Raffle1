@@ -1,12 +1,36 @@
 // Place all the styles related to the page controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.home {
+body {
+  background: #fff url('https://haitifunrun.files.wordpress.com/2012/05/raffle-fish-bowl-photo.jpg');
   height: 100vh;
-  width: auto;
-  background: #fff url('https://haitifunrun.files.wordpress.com/2012/05/raffle-fish-bowl-photo.jpg') no-repeat fixed center;
 }
-.main {
-  font-size: 30px;
-  line-height: 40px;
+
+h1 {
+  font-size: 8em;
+  text-align: center;
+  color: #fff;
+  line-height: 1em;
+  margin-bottom: 1em;
+
+}
+
+button {
+  font-size: 3em !important;
+  float: center;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+button a {
+  color: #ffffff !important;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+}
+
+#view-raf {
+  font-size: 20px;
+  color: #fff !important;
+  text-align: center;
+  text-decoration: none !important;
 }
