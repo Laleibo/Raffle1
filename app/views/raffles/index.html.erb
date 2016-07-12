@@ -23,12 +23,9 @@
           <td><%= link_to 'Edit', edit_raffle_path(raffle) %></td>
           <td><%= link_to 'Destroy', raffle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
-        <td><%= link_to 'Winner', "winner/#{raffle.id}" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Raffle', new_raffle_path %>
