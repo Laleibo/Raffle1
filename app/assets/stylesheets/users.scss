@@ -6,41 +6,62 @@
 }
 
 .register h1 {
-  color: Blue;
+  color: blue;
 }
 
  .field {
    font-weight: bold;
  }
 
-.row{
-  margin: 5px;
-  border: 1px solid black;
-  font-size: 14px;
+ .z {
+   font-size: 20px;
+   background-color: gray;
  }
 
- .col-md-2 {
-   background: gray;
+ .z a {
+   color: black;
  }
-.col-md-1 {
-    margin-right: 5em;
+
+ .y {
+   background-color: transparent;
+   margin: 10px;
+   font-size: 14px;
+   padding: 5px;
+ }
+.x {
+  margin: 10px;
+  border: 1px solid black;
+  font-size: 14px;
+  padding: 5px;
 }
-.win {
-  float: right;
-  display: flex;
+
+.blink_me {
+  color:white;
+  border-top:3px dashed silver;
+}
+  .blink_me h2{
+    color: white;
+    font-weight: bold;
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0.0; }
 }
 .ticket {
   border: 2px solid black;
-  border-radius: 4px;
+  border-radius: 17px;
   margin: 5px;
-  padding: 20px;
+  padding: 10px;
   background: red;
-  margin-right: 75%;
+  margin-right: 70%;
   text-align: center;
+  color: black;
+  margin-bottom: 5px;
 }
 
 .ticket a {
-  color: black;
+  color: silver;
   font-size: 22px;
 }
 
