@@ -2,16 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-button {
- display: inline;
- padding: 20px 30px;
+
+
+// .inline {
+//   display: inline-block;
+//   margin: 30px 30px;
+// }
+
+
+.counter {
+  border: 2px solid red;
+  color: black;
+  font-size: 16px;
+  padding: .5em;
+  text-align: center;
+  margin-right: 200px;
+
 }
 
-td {
-  font-size: 30px;
-}
-
-.inline {
-  display: inline-block;
-  margin: 30px 30px;
+h5 {
+  font-weight: bold;
 }

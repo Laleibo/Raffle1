@@ -18,10 +18,11 @@
 
 
 a:hover{
-  background-color: transparent;
+  color: red;
+  background-color: transparent;;
 }
 
-.nav a, .nav{
+/*.nav a, .nav{
   font-size: 20px;
-  color: #ffffff !important;
-}
+  color: #ffffff !important;*/
+/*}*/

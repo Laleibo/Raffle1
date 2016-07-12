@@ -20,7 +20,6 @@
 <%= link_to 'Update Your Account', edit_user_path(@user) %><br>
 
 <h2> WynRaffle Event History</h2>
-<button class="btn inline z"><%= link_to 'View Ongoing WynRaffles', raffles_path %></button>
 <% @user.raffles.each do |raffle|  %>
   <div class="">
     <div class="ticket">

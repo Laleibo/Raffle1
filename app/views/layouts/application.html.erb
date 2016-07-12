@@ -8,11 +8,14 @@
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   </head>
 
   <body>
+    <div class="containter">
     <% if current_user && current_user.admin? %>
-      Signed in as <%= current_user.first_name %> | <%= link_to 'My Profile', current_user %> | <%= link_to "Logout", logout_path %> | <%= link_to "Create Raffle", new_raffle_path %>
+    Signed in as <%= current_user.first_name %> | <%= link_to 'My Profile', current_user %> | <%= link_to "Logout", logout_path %> | <%= link_to "Create Raffle", new_raffle_path %>
     <% elsif current_user %>
       Signed in as <%= current_user.first_name %> | <%= link_to 'My Profile', current_user %> | <%= link_to "Logout", logout_path %>
     <% else %>
@@ -26,4 +29,5 @@
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </body>
+</div>
 </html>

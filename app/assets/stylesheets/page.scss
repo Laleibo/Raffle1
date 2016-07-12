@@ -1,28 +1,37 @@
 // Place all the styles related to the page controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
+.home {
   background: #fff url('https://haitifunrun.files.wordpress.com/2012/05/raffle-fish-bowl-photo.jpg');
   height: 100vh;
+  width: 100%;
 }
 
-h1 {
-  font-size: 8em;
+.home h1 {
+  font-size: 7em;
   text-align: center;
   color: #fff;
   line-height: 1em;
   margin-bottom: 1em;
-
+  padding-top: 1em;
 }
 
-button {
+.home h2 {
+  color: white;
+  text-align: center;
+}
+
+.fa {
+  color: black;
+}
+button #view-raf {
   font-size: 3em !important;
   float: center;
   margin: 0 auto;
   background-color: transparent;
 }
 
-button a {
+button button #view-raf  a {
   color: #ffffff !important;
   border: 2px solid #fff;
   padding: 10px 20px;
@@ -33,4 +42,69 @@ button a {
   color: #fff !important;
   text-align: center;
   text-decoration: none !important;
+}
+
+.count {
+  border-top: 2px solid silver;
+  display: flex;
+  text-align: center;
+  margin: 3em;
+  padding: 4.5em;
+}
+
+.circle1 {
+	width: 200px;
+	height: 200px;
+	background: red;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+  border: 1px solid black;
+  padding: 2em;
+  color: black;
+  margin: 30px;
+}
+
+  .circle2 {
+  	width: 200px;
+  	height: 200px;
+  	background: white;
+  	-moz-border-radius: 100px;
+  	-webkit-border-radius: 100px;
+  	border-radius: 100px;
+    border: 1px solid black;
+    padding: 2em;
+    color: black;
+    margin: 30px;
+  }
+
+    .circle3 {
+    	width: 200px;
+    	height: 200px;
+    	background: blue;
+    	-moz-border-radius: 100px;
+    	-webkit-border-radius: 100px;
+    	border-radius: 100px;
+      border: 1px solid black;
+      padding: 2em;
+      color: black;
+      margin: 30px;
+    }
+
+.description {
+      padding: 2em;
+    }
+
+.quote {
+  height: 300px;
+  background: black;
+  color: white;
+}
+
+// .quotetext{
+//   float: right;
+// }
+
+.quote h1{
+  color: red;
 }
