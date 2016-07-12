@@ -1,31 +1,57 @@
 <p id="notice"><%= notice %></p>
 
-<p><%= @count %> tickets have been sold for this raffle. </p>
-<p>
-  <strong>Title:</strong>
-  <%= @raffle.title %>
-</p>
+<div class="row">
 
-<p>
-  <strong>Description:</strong>
-  <%= @raffle.description %>
-</p>
+<table class="table table-striped table-bordered">
+  <thead>
+  <tr>
+    <th><%= @count %> tickets have been sold for this raffle. </th>
+    <th colspan="6"></th>
+  </tr>
+  </thead>
 
-<p>
-  <strong>Prize:</strong>
-  <%= @raffle.prize %>
-</p>
+  <tbody>
+  <td>
+    <p><%= @count %> tickets have been sold for this raffle. </p>
+  </td>
+
+  <td>
+    <p>
+      <strong>Title:</strong>
+      <%= @raffle.title %>
+    </p>
+  </td>
+
+  <td>
+    <p>
+      <strong>Description:</strong>
+      <%= @raffle.description %>
+    </p>
+  </td>
+
+  <td>
+  <p>
+    <strong>Prize:</strong>
+    <%= @raffle.prize %>
+  </p>
+  </td>
+
+  </tbody>
+
+</table>
+
+</div>
 
 <% if @raffle.winner == nil %>
-<%= link_to 'Buy 1 Ticket', confirm_path(raffle_id: @raffle.id) %>
+<button class= "btn inline"><%= link_to 'Buy 1 Ticket', confirm_path(raffle_id: @raffle.id) %></button>
 <% else %>
 <%= @raffle.winner.first_name%>
 <%= @raffle.winner.last_name%>
 <% end %>
+</div>
 
-
-<%= link_to 'Back', raffles_path %>
-  <% if current_user.admin? %>
-    <%= link_to 'Edit', edit_raffle_path(@raffle) %> |
-    <%= button_to 'Generate Winner' , "/winner/#{@raffle.id}" %>
- <% end %>
+<button class="btn inline"><%= link_to 'Back', raffles_path %></button>
+<button class="btn inline"><%= link_to 'Edit', edit_raffle_path(@raffle) %></button>
+<% if current_user.admin? %>
+  <button class="btn inline"><%= link_to 'Generate Winner' , "/winner/#{@raffle.id}" %></button>
+<% end %>

@@ -14,3 +14,12 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background: #fff url('https://haitifunrun.files.wordpress.com/2012/05/raffle-fish-bowl-photo.jpg') no-repeat fixed center;
+}
+
+.main {
+  font-size: 30px;
+  line-height: 40px;
+}
