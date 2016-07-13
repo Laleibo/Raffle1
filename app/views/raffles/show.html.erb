@@ -1,32 +1,50 @@
 <p id="notice"><%= notice %></p>
-
-<div class="jumbotron">
-  <h1><%= @raffle.title %></h1><br>
-  <h3> <%= @raffle.description %></h3><br><br>
-  <div class="counter"> <%= @count%> Tickets Purchased For This Raffle. </div>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="jumbotron">
+      <h1><%= @raffle.title %></h1><br>
+      <h3> <%= @raffle.description %></h3><br><br>
+      <div class="counter"> <%= @count%> Tickets Purchased For This Raffle. </div>
+    </div>
+  </div>
 </div>
-<div class="row prize">
-  <div class="col-sm-6 col-md-4 prize">
-      <img src="..." alt="...">
-      <div class="caption">
-        <h3>PRIZE</h3>
-        <h4><%= @raffle.prize %></div></h4>
-        <br>
-      </div>
-   </div>
-        <% if @raffle.winner == nil %>
-  <%= link_to 'Buy 1 Ticket', confirm_path(raffle_id: @raffle.id) , class: 'btn btn-success' %>
- <% else %>
- <div class= "winner">The Winning Ticket: <br><br><strong><%= @raffle.winner.first_name%> <%= @raffle.winner.last_name%> </strong></div>
- <% end %>
 
-          </div>
-       </div>
+
+<div class="row">
+
+  <div class="col-sm-12 col-md-6">
+    <div class="fund-goal">
+      <h1>Fundraising Goal:</h1>
+      <%= image_tag("ping-pong.jpg", :alt => "ping pong table") %>
+      <br>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-6">
+    <div class="prizes">
+      <h1>Prizes:</h1>
+      <div class="col-md-4"><%= image_tag("jw-black.jpg", :alt => "johnny walker black") %></div>
+      <div class="col-md-4"><%= image_tag("motorola.jpg", :alt => "motorola phone") %></div>
+      <div class="col-md-4"><%= image_tag("squid-backpack.jpg", :alt => "squid backpack") %></div>
+      <h4><%= @raffle.prize %></h4>
+      <% if @raffle.winner == nil %>
+      <%= link_to 'Buy 1 Ticket', confirm_path(raffle_id: @raffle.id) , class: 'btn btn-success' %>
+      <% else %>
+      <div class= "winner">The Winning Ticket: <br><br><strong><%= @raffle.winner.first_name%> <%= @raffle.winner.last_name%> </strong></div>
+      <% end %>
+      <br>
+    </div>
+  </div>
+</div>
+
+
 <br><br>
-<button type="button" class="btn btn-primary"><%= link_to 'View WynRaffles', raffles_path %></button>
-  <% if current_user.admin? %>
-  <button type="button" class="btn btn-secondary"><%= link_to 'Edit', edit_raffle_path(@raffle) %></button>
-<%= button_to 'Generate Winner' , "/winner/#{@raffle.id}", class: 'btn btn-success' %>
 
-<% end %>
+<div class="row">
+  <div class="col-sm-12 bt-align">
+    <button type="button" style="color: #fff;"class="btn btn-primary wte-font"><%= link_to 'View WynRaffles', raffles_path  %></button>
+    <% if current_user.admin? %>
+    <div class="block"><button type="button" class="btn btn-secondary"><%= link_to 'Edit', edit_raffle_path(@raffle) %></button></div>
+    <div class="block"><%= button_to 'Generate Winner' , "/winner/#{@raffle.id}", class: 'btn btn-success' %></div>
+    <% end %>
+  </div>
 </div>
