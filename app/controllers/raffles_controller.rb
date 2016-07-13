@@ -64,10 +64,9 @@ class RafflesController < ApplicationController
 
 
 def generate
-  @raffle = Raffle.find(params[:raffle_id]) #setting that specific raffle from page we are on
-  @winner = @raffle.tickets.sample.user_id # getting array of all tickets for that specific raffle then we call  sample to get 1
+  @raffle = Raffle.find(params[:raffle_id])
+  @winner = @raffle.tickets.sample.user_id
   @raffle.update(user_id: @winner)
-  # redirect_to @raffle
 end
 
 
