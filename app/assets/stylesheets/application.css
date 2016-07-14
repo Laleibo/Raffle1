@@ -30,3 +30,7 @@ a:hover{
 .nav a {
   padding: 10px;
 }
+
+* {
+  font-family: 'Coda', cursive;
+}

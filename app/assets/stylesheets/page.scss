@@ -109,10 +109,17 @@ button#view-raf  {
   line-height: 1em;
 }
 
-.ft-sz-5em {
+.ft-sz-10em {
   font-size: 6em;
   position: relative;
-  left: 0;
+  left: -9px;
+  top: 0;
+  line-height: 1em;
+}
+.ft-sz-6em {
+  font-size: 6em;
+  position: relative;
+  left: -11;
   top: 0;
   line-height: 1em;
 }
@@ -160,17 +167,30 @@ margin-left: 177px;
 //   margin-bottom: 30px;
 // }
 
-.caption h4 {
-  text-align: justify;
-  padding: 10px 30px;
+.caption1  {
+  font-family: 'Coda', cursive;
+  font-size: 17px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+.caption1 h4 {
+  align-items: stretch;;
+}
+
+.caption  {
+  font-family: 'Coda', cursive;
+  font-size: 25px;
+    margin-top: 50px;
 }
 
 .footer {
-  background-color: #000;
+  background-color: white;
 }
 
 .footer-text {
-  color: #fff;
+  color: black;
   font-size: 15px;
 }
 .circlec {
